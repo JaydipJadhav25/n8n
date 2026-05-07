@@ -1,0 +1,65 @@
+{
+  "name": "my firstwork flow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ef128f68-9bb7-4872-b036-4d0fd18d5465",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "sendTo": "jaydipjadhav.dev25@gmail.com",
+        "subject": "my first n8n",
+        "message": "<h1>hii jaydip </h1> ",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        0
+      ],
+      "id": "f0c7dd16-a079-4aec-92b6-2826a3897a70",
+      "name": "Send a message",
+      "webhookId": "ffd4b158-4938-4793-a9f2-69ec02ff7808",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Kn0HfzLBDma5Rcim",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "c660ecd4-a647-4a46-8f53-ff0d2aabb941",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5ec0e9d73bd8c932ca6cc24515a1be6031747ad273158e27c365c732d7e8682b"
+  },
+  "id": "uIeTorQhVDNYJZqV",
+  "tags": []
+}
